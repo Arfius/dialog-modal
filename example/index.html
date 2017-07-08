@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Example Dialog Modal</title>
+</head>
+
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" type="text/css" />
+<link rel="stylesheet" href="node_modules/animate.css/animate.css" type="text/css" />
+<link rel="stylesheet" href="node_modules/angular-css/angular-css.min.js" type="text/css" />
+<link rel="stylesheet" href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css" type="text/css" />
+
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-sanitize/angular-sanitize.js"></script>
+<script src="node_modules/angular-animate/angular-animate.js"></script>
+<script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+<script src="node_modules/angular-css/angular-css.min.js"></script>
+<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+<script src="node_modules/dialog-modal/dist/dialogmodal.ser.js"></script>
+
+
+
+<script src="app.js"></script>
+<body ng-app="example" ng-controller="mainCtrl" class="container">
+
+<h1> Dialog Modal   </h1>
+
+<!-- showConfirm -->
+<div class="panel panel-default">
+  <div class="panel-heading">showConfirm</div>
+  <div class="panel-body">
+    <button class="btn btn-default" ng-click="showConfirm()">showConfirm</button> <br/>
+    <p class="lead">
+      <code>
+        showConfirm (title,body,text_btn_cancel,text_btn_ok,callback_btn_ok,param)
+      </code>
+    </p>
+  </div>
+</div>
+
+
+<!-- showAlert -->
+<div class="panel panel-default">
+<div class="panel-heading">showAlert</div>
+<div class="panel-body">
+  <button class="btn btn-default" ng-click="showAlert()">showAlert</button> <br/>
+  <p class="lead">
+    <code>
+      showAlert (title,body,text_btn)
+    </code>
+  </p>
+</div>
+</div>
+
+<!-- showWaiting -->
+<div class="panel panel-default">
+<div class="panel-heading">showWaiting</div>
+<div class="panel-body">
+  <button class="btn btn-default" ng-click="showWaiting()">showWaiting</button> <br/>
+  <p class="lead">
+    <code>
+      showWaiting ()
+    </code><br/>
+    <code>
+      hide ()
+    </code>
+  </p>
+</div>
+</div>
+
+<!-- showAlertWithRedirect -->
+<div class="panel panel-default">
+<div class="panel-heading">showAlertWithRedirect</div>
+<div class="panel-body">
+  <button class="btn btn-default" ng-click="showAlertWithRedirect()">showAlertWithRedirect</button> <br/>
+  <p class="lead">
+    <code>
+      showAlertWithRedirect: (title,body,text_btn,redirect)
+    </code><br/>
+    <code>
+      redirect={route:'state',param:null}
+    </code>
+  </p>
+</div>
+</div>
+
+
+
+
+
+</body>
+</html>

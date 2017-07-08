@@ -1,0 +1,41 @@
+{
+  "main": "dist/dialogmodal.ser.js",
+  "dependencies": {
+    "angular": "~1.6.4",
+    "angular-animate": "~1.6.4",
+    "angular-ui-bootstrap": "~2.5.0",
+    "angular-css": "~1.0.8",
+    "angular-sanitize": "~1.6.4",
+    "angular-ui-router": "~0.4.2",
+    "animate.css": "~3.5.2",
+    "bootstrap": "~3.3.7"
+  },
+  "files": [
+    "dist/dialogmodal.ser.js",
+    "dist/loading.gif"
+  ],
+  "gitHead": "https://github.com/Arfius/dialog-modal.git",
+  "homepage": "https://github.com/Arfius/dialog-modal.git#readme",
+  "keywords": [
+    "angularjs",
+    "modal",
+    "alert",
+    "comfirm",
+    "waiting",
+    "popup"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "Alfonso Farruggia",
+      "email": "alfarruggia@gmail.com"
+    }
+  ],
+  "name": "dialog-modal",
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arfius/dialog-modal.git"
+  },
+  "version": "1.0.0"
+}

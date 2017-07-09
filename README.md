@@ -1,5 +1,9 @@
 # dialog-modal
-Angularjs Directive to create modal popup.
+Angularjs service to create very simple modal popup. 
+
+* ```Easy to install```
+* ```No waste time```
+* ```Popup```: ```Alert, Confirm, Waiting, ConfirmWithRedirect```
 
 ## Installation
 
@@ -37,11 +41,37 @@ app.controller('mainCtrl', ['$scope','dialogModal',function($scope,dialogModal)
 Then, use  dialogModal as below:
 
 ```js
-
+//Alert Popup
 dialogModal.showAlert("title","body","OK");
-
 ```
+![alert](imgrdm/alert.png)
 
+```js
+//Waiting Popup
+dialogModal.showWaiting();
+//for dismissing the Waiting Popup invoke hide()
+dialogModal.hide();
+```
+![alert](imgrdm/waiting.png)
+
+
+```js
+//Confirm Popup
+//the callback_btn_ok is invoked by "OK" button
+//the parameter for callback_btn_ok is the object {param:'yes'}
+dialogModal.showConfirm("title","body","CANCEL","OK",callback_btn_ok,{param:'yes'});
+```
+![alert](imgrdm/confirm.png)
+
+
+```js
+//ConfirmWithRedirect Popup
+//the routing object is indicated in the last paratmer: {route:'state', param:null}
+dialogModal.showAlertWithRedirect("title","body","text_btn",{route:'state', param:null})
+```
+![alert](imgrdm/redirect.png)
+
+## Example
 Check the example in ```example``` directory. Run the example with
 
 ```

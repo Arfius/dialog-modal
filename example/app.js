@@ -28,11 +28,6 @@ app.controller('mainCtrl', ['$scope','dialogModal',function($scope,dialogModal)
 
     $scope.showAlertWithRedirect=function()
     {
-      dialogModal.showAlertWithRedirect();
-    }
-
-    $scope.showAlertWithRedirect=function()
-    {
       dialogModal.showAlertWithRedirect("title","body","text_btn",{route:'state', param:null})
     }
 

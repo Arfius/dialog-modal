@@ -12,7 +12,7 @@ angular.module('dialogModalService',['ngAnimate',
     var modalInstance ;
     var _redirect={route:null,param:null};
     var _uibModalInstance;
-
+    var element;
     return{
 
         hide:function()
@@ -21,11 +21,15 @@ angular.module('dialogModalService',['ngAnimate',
             $timeout(function(){_uibModalInstance()}, 200);
 
         },
-
+        setElement:function(_element)
+        {
+            element=_element;
+        },
         showConfirm: function (title,body,text_btn_cancel,text_btn_ok,callback_btn_ok,param)
         {
             modalInstance = $uibModal.open({
                 animation: true,
+                appendTo:element,
                 template: '<div class="modal-header">    <h3 class="modal-title" id="modal-title">{{title}}</h3></div><div class="modal-body" id="modal-body">    {{body}}</div><div class="modal-footer">    <button class="btn btn-default" type="button" ng-click="cancel()">{{text_btn_cancel}}</button>    <button class="btn btn-primary" type="button" ng-click="callback()">{{text_btn_ok}}</button></div>',
                 controller: function($scope,$uibModalInstance) {
                     $scope.cancel=function()
@@ -49,6 +53,7 @@ angular.module('dialogModalService',['ngAnimate',
         {
             modalInstance = $uibModal.open({
                 animation: true,
+                appendTo:element,
                 template: '<div class="modal-header">    <h3 class="modal-title" id="modal-title">{{title}}</h3></div><div class="modal-body" id="modal-body">    <p ng-bind-html="body"></p></div><div class="modal-footer">    <button class="btn btn-primary" type="button" ng-click="cancel()">{{text_btn_cancel}}</button></div>',
                 controller: function($scope,$uibModalInstance) {
                     $scope.cancel=function()
@@ -78,6 +83,7 @@ angular.module('dialogModalService',['ngAnimate',
             modalInstance = $uibModal.open({
                 animation: true,
                 backdrop:false,
+                appendTo:element,
                 template: '<div class="modal-header">    <h3 class="modal-title" id="modal-title"></h3></div><div class="modal-body text-center" id="modal-body">   <img width="100px" height="100px" ng-src="loading.gif"></div><div class="modal-footer"></div>',
                 controller: function($scope,$uibModalInstance)
                 {

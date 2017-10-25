@@ -6,6 +6,7 @@ var app = angular.module("example",
 
 app.controller('mainCtrl', ['$scope','dialogModal',function($scope,dialogModal)
 {
+    dialogModal.setElement(document.getElementById("mybody"))
 
     $scope.callback_btn_ok=function(param) {
       alert(param);

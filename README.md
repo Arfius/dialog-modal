@@ -30,12 +30,13 @@ Include the dependencies
 <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
 <script src="node_modules/dialog-modal/dist/dialogmodal.ser.js"></script>
 ```
-Inject variable dialogModal on Controller
+Inject variable dialogModal on Controller and set the Element to append the popup
 
 
 ```js
 
 app.controller('mainCtrl', ['$scope','dialogModal',function($scope,dialogModal)
+dialogModal.setElement($document.find('aside').eq(0));
 
 ```
 Then, use  dialogModal as below:
